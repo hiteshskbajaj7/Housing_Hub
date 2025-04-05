@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housing Hub - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <span>🏠</span> Housing Hub
+        </div>
+        <div class="search-bar">    
+            <input type="text" id="search" placeholder="Search">                             
+        </div>
+        
+        <div class="header-icons">
+            <button class="post-listing" onclick="location.href='owner.html'">Post a listing</button>
+            <button class="feedback-btn" onclick="location.href='feedback.html'">Feedback</button>
+            <span></span> <!-- Notification Icon -->
+            <span></span> <!-- Profile Icon -->
+            <button id="logout">Logout</button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <h2>Find your next home in Chembur, Mumbai</h2>
+
+        <!-- Filters -->
+        <div class="filter-buttons">
+            <button class="filter-btn">PG</button>
+            <button class="filter-btn">Shared Flat</button>
+            <button class="filter-btn">Full Flat</button>
+        </div>
+
+        <!-- Property List -->
+        <div id="propertyList">
+            <!-- First Row -->
+            <div class="property">
+                <img src="images1.jpg" alt="Flat Image">
+                <h3>2 BHK in Chembur East</h3>
+                <p>₹55,000/month</p>
+                <p>Fully furnished, Near VESIT</p>
+            </div>
+
+            <div class="property">
+                <img src="images2.jpg" alt="Flat Image">
+                <h3>1 RK in Collector colony</h3>
+                <p>₹18,000/month</p>
+                <p>Great for bachelors</p>
+            </div>
+
+            <div class="property">
+                <img src="images3.jpg" alt="Flat Image">
+                <h3>1 BHK in Chembur Camp</h3>
+                <p>₹40,000/month</p>
+                <p>Spacious</p>
+            </div>
+
+            <!-- Second Row -->
+            <div class="property">
+                <img src="images4.jpg" alt="Flat Image">
+                <h3>3 BHK near Chembur Station</h3>
+                <p>₹75,000/month</p>
+                <p>Luxury Apartment</p>
+            </div>
+
+            <div class="property">
+                <img src="images5.jpg" alt="Flat Image">
+                <h3>Studio Apartment in Tilak Nagar</h3>
+                <p>₹22,000/month</p>
+                <p>Compact & Affordable</p>
+            </div>
+
+            <div class="property">
+                <img src="images6.jpg" alt="Flat Image">
+                <h3>2 BHK in Diamond Garden</h3>
+                <p>₹50,000/month</p>
+                <p>Prime Location</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Check if user is logged in
+        const user = JSON.parse(localStorage.getItem("user"));
+        if (!user) {
+            alert("❌ Please login first!");
+            window.location.href = "index.html";
+        }
+
+        // Logout function
+        document.getElementById("logout").addEventListener("click", function () {
+            localStorage.removeItem("user");
+            window.location.href = "index.html";
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

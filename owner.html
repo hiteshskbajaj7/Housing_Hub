@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Your Property</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            padding: 15px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .search-bar input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+        }
+        .header-icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .back-btn {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .flex-row {
+            display: flex;
+            gap: 10px;
+        }
+        .flex-row div {
+            flex: 1;
+        }
+        .upload-btn {
+            margin-top: 5px;
+            padding: 8px;
+            border: none;
+            background-color: #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .post-btn {
+            width: 100%;
+            margin-top: 15px;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">🏠 Housing Hub</div>
+        <div class="search-bar">
+            <input type="text" placeholder="🔍 Search">
+        </div>
+        <div class="header-icons">
+            <button onclick="window.location.href='dashboard.html'" class="back-btn">Dashboard</button>
+            <span>🌍</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>List Your Property for Rent</h2>
+        <form>
+            <label>Property Type</label>
+            <select>
+                <option>Select Property Type</option>
+                <option>1 BHK</option>
+                <option>2 BHK</option>
+                <option>3 BHK</option>
+            </select>
+
+            <label>Location</label>
+            <input type="text" placeholder="Enter Location">
+
+            <label>Rent</label>
+            <input type="text" placeholder="Enter Rent">
+
+            <div class="flex-row">
+                <div>
+                    <label>Rooms</label>
+                    <input type="text" placeholder="Enter number of rooms">
+                </div>
+                <div>
+                    <label>Sharing Capacity</label>
+                    <input type="text" placeholder="Enter sharing capacity">
+                </div>
+            </div>
+
+            <label>Property Images</label>
+            <button class="upload-btn">Upload</button>
+
+            <h3>Owner/Broker Details</h3>
+            <div class="flex-row">
+                <div>
+                    <label>Name</label>
+                    <input type="text" placeholder="Enter name">
+                </div>
+                <div>
+                    <label>Phone</label>
+                    <input type="text" placeholder="Enter phone">
+                </div>
+            </div>
+
+            <label>Email</label>
+            <input type="text" placeholder="Enter email">
+
+            <label>Additional Details</label>
+            <textarea placeholder="Enter additional details"></textarea>
+
+            <button class="post-btn">Post Property</button>
+        </form>
+    </div>
+</body>
+</html>
